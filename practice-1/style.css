@@ -27,8 +27,6 @@ body {
 }
 
 #header {
-    background-color: beige;
-
     padding: 0 120px;
     height: 64px;
 
@@ -43,8 +41,16 @@ body {
     align-items: center;
 }
 
+.header-logo:hover {
+    cursor: pointer;
+}
+
 .header-logo-icon {
-    background-color: red;
+    background-image: url(asset/header_logo.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+
     width: 24px;
     height: 24px;
 }
@@ -55,7 +61,15 @@ body {
 }
 
 .header-search-icon {
-    background-color: red;
+    background-image: url(asset/search.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+
     width: 24px;
     height: 24px;
+}
+
+.header-search-icon:hover {
+    cursor: pointer;
 }
