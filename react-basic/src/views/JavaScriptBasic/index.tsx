@@ -95,7 +95,11 @@ function JavaScriptBasic() {
     let number2:any = "10";
 
     // result = 10 == "10";
-    result = number1 == number2;
+    result = number1 == number2; //true
+    result = number1 === number2; //false
+    
+    result = number1 != number2; // false
+    result = number1 !== number2; // true
 
     return(<></>);
 
