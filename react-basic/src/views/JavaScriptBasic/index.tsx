@@ -96,7 +96,7 @@ function JavaScriptBasic() {
 
     // result = 10 == "10";
     result = number1 == number2; //true
-    result = number1 === number2; //false
+    result = number1 === number2; //false //자료형, 내용을 비교하는 엄격한 연산자
     
     result = number1 != number2; // false
     result = number1 !== number2; // true
