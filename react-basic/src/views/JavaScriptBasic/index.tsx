@@ -123,7 +123,7 @@ function JavaScriptBasic() {
     // map 함수 : 배열.map(반환 값이 있는 함수);
     //            배열을 반복하면서 함수 작업의 반환 값으로 새로운 배열을 생성하여 반환
     const numbers = [1,2,3,4,5];
-    let resultList = numbers.map(function(item) {
+    let resultList = numbers.map(function (item) {
         const result = item * item;
         return result;
     }); // [1,4,9,16,25] resultList의 리턴값
@@ -180,9 +180,24 @@ function JavaScriptBasic() {
     console.log(age);
     
     let {address, ...other} = object1;
-    // address : '부산광역시', other: { name: '홍길동', age:30 }
+    // address : '부산광역시', other: { name: '홍길동', age:30 }  //! 객체 분해해서 생성
 
+    let object3 = { telNumber:'010-0000-0000', email:'1@email.com'}
+    let subObject = {...object2, ...object3};
+    // { name:'고길동' age:50, address:'인천광역시', telNumber:'010-0000-0000', email:'1@email.com' }  //! 객체를 합쳐서 생성
     
+    // 함수
+
+    // 함수 선언 방법 
+    // - function 함수명 (매개변수:타입, ... ): 반환타입 {  //! typescript의 경우 타입 지정을 해주어야함 
+    // ...
+    // return 결과값;
+    // } 
+
+    // - 화살표 함수
+    // 함수를 변수처럼 사용하는 것
+    // 선언 방법
+    // const 함수명 = (매개변수, ... ) => { ... return 결과값 };
 
     return(<></>);
 
