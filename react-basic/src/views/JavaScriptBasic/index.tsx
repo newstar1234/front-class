@@ -41,7 +41,7 @@ function JavaScriptBasic() {
     // tsVariable2 = 1;
     tsVariable2 = "안녕하세요";
 
-    let tsVariable3: string = "안녕하세요";
+    let tsVariable3: string = "안녕하세요"; //!  let 변수명:타입 = '값 초기화';
 
     // 데이터 타입
     // number : 숫자 타입 (정수, 실수, 10진수, 16진수, ...)
@@ -77,7 +77,7 @@ function JavaScriptBasic() {
     object = null;
     let nullVariable:null = null;
 
-    let stringVariable3: string | null | number = null; //변수 선언시 여러개의 타입 선언이 가능
+    let stringVariable3: string | null | number = null; //!변수 선언시 여러개의 타입 선언이 가능
     stringVariable3 = "문자열";
     stringVariable3 = 10;
     
