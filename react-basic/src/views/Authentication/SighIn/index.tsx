@@ -116,7 +116,7 @@ function MainRightCardBottom ( ) {
     <div className="main-right-card-bottom">
       <button className="sign-in-button" onClick={onSignInButtonHandler} >로그인</button>
       <div className="sign-up-description">
-        신규 사용자이신가요? <a href="#" className="emahasis">회원가입</a>
+        신규 사용자이신가요? <a href="./sign-up" className="emphasis">회원가입</a>
       </div>
     </div>
   );

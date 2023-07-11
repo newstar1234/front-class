@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter> //! 브라우저라우터로 감싸줘야 한다!!!! 무조건
+    <BrowserRouter> 
       <App />
     </BrowserRouter>
   </React.StrictMode>
