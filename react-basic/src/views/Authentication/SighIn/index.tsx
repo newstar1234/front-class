@@ -2,6 +2,10 @@ import React  from 'react'
 import './style.css';
 import { useState, SetStateAction, Dispatch } from 'react'
 
+// useState로 상태를 선언하는 경우 : 해당 컴포넌트에서만 상태를 사용할 때 
+// useStore로 상태를 선언하는 경우 : 여러 컴포넌트에서 상태를 사용할 때  
+import { signInStore } from '../../../stores'; 
+
 function Header () {
     return (
         <div id="header">
@@ -39,14 +43,14 @@ function MainLeftContainer () {
 
 function MainRightContainer () {
 
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  // const [email, setEmail] = useState<string>('');
+  // const [password, setPassword] = useState<string>(''); //! 07.10
 
   return (
   <div className="main-right-container">
     <div className="main-right-card">
-      <MainRightCardTop setEmail={setEmail} setPassword={setPassword}/>
-      <MainRightCardBottom email={email} password={password} />
+      <MainRightCardTop />
+      <MainRightCardBottom  />
     </div>
   </div>
   );
@@ -57,7 +61,10 @@ interface MainRightCardTopProps {
   setPassword: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function MainRightCardTop ({setEmail, setPassword} : MainRightCardTopProps ) {
+function MainRightCardTop ( ) {
+
+  const { setEmail, setPassword } = signInStore();
+
   return (
     <div className="main-right-card-top">
       <div className="sign-in-text">로그인</div>
@@ -73,7 +80,7 @@ interface InputBoxProps {
   label: string;
   show: boolean;
   type: string;
-  set: React.Dispatch<React.SetStateAction<string>>;
+  set: (arg: string) => void;
 }
 
 function InputBox ({label, show, type, set} : InputBoxProps ) {
@@ -96,9 +103,12 @@ interface MainRightCardBottomProps {
   password: string;
 }
 
-function MainRightCardBottom ({email, password} : MainRightCardBottomProps) {
+function MainRightCardBottom ( ) {
 
-const onSignInButtonHandler = () => {
+  const {email, password } = signInStore();
+  
+  const onSignInButtonHandler = () => {
+
   alert(`email : ${email}, password : ${password}`);
 }
 
